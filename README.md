@@ -5,22 +5,15 @@
   Identify
   block
   device
-  using `
-  lsblk`
+  using `lsblk`
 
   Install
 
-  `
-  sudo
-  nix
-  run 'github:nix-community/disko#disko-install' -- --flake '/tmp/config/etc/nixos#mymachine' --disk main /dev/sda`
+  `sudo nix run 'github:nix-community/disko#disko-install' -- --flake '/tmp/nixos-config#mymachine' --disk main /dev/sda`
 
   Persist
   EFI
   boot
   entries
 
-  `
-  sudo
-  nix
-  run 'github:nix-community/disko#disko-install' -- --write-efi-boot-entries --flake '/tmp/config/etc/nixos#mymachine' --disk main /dev/sda`
+  `sudo nix run 'github:nix-community/disko#disko-install' -- --write-efi-boot-entries --flake '/tmp/nixos-config#mymachine' --disk main /dev/sda`
